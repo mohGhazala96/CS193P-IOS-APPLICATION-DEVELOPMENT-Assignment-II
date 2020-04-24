@@ -8,11 +8,29 @@
 
 import Foundation
 class SetGamePlay {
-    var cards:[Card] = [Card]()
-    init() {
-        for _ in 1...24{
-            let card:Card = Card()
-            cards.append(card)
-        }
+    var selectedCards = [Card]()
+    var generatedCards = [Card]()
+
+    func generateCard() -> Card{
+        let card = Card()
+        generatedCards.append(card)
+        return card
+    }
+    
+    func addSelectedCard(_ card:Card)-> Bool{
+        selectedCards.append(card)
+        return selectedCards.count == 3
+    }
+    
+    func updateScore() -> Int {
+        return self.doSelectedCardsMatch() == true ? 3 : -1
+    }
+    
+    func doSelectedCardsMatch() -> Bool {
+        return false
+    }
+    
+    func removeSelectedCard(_ card:Card){
+        selectedCards.removeAll{ $0 == card }
     }
 }

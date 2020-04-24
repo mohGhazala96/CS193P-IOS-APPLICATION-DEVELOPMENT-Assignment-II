@@ -7,18 +7,35 @@
 //
 
 import Foundation
-struct  Card {
+struct  Card :Hashable  {
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(identifier)
+    }
+    
+    static func == (lhs: Self, rhs: Self) -> Bool{
+        return lhs.identifier == rhs.identifier
+    }
+    
+    private var identifier:Int
+    static var idenitifierFactory = 0
     private(set) var shapeText:String
     private(set) var color:colors
     private(set) var shade:shading
     private(set) var numberOfSymbols: Int
     
+    static func getUniqueIdentifier() ->Int{
+        idenitifierFactory+=1
+        return idenitifierFactory
+    }
+    
     init() {
+        self.identifier = Card.getUniqueIdentifier()
         color = colors.allCases.randomElement()!
         shade = shading.allCases.randomElement()!
+        let shape = shapes.allCases.randomElement()!
         numberOfSymbols = Int.random(in: 1 ... 3)
         
-        let shape = shapes.allCases.randomElement()!
         switch shape {
         case .circle:
             shapeText = String(repeating: "●", count:numberOfSymbols )
