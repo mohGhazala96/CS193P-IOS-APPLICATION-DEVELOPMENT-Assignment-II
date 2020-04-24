@@ -10,8 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet var toBeDealtCards: [UIButton]!
-    @IBOutlet var onScreenCards: [UIButton]!
+    @IBOutlet var toBeDealtCards: [CardButton]!
+    @IBOutlet var onScreenCards: [CardButton]!
     @IBOutlet weak var scoreLabel: UILabel!
     var game = SetGamePlay()
     @IBAction func dealCards(_ sender: UIButton) {
@@ -22,8 +22,8 @@ class ViewController: UIViewController {
         
     }
     
-    @IBAction func touchCard(_ sender: Any) {
-        
+    @IBAction func touchCard(_ sender: CardButton) {
+        sender.toggleButtonSelection()
     }
     
     override func viewDidLoad() {
@@ -32,8 +32,8 @@ class ViewController: UIViewController {
         
         for index in allButtons.indices{
             let button = allButtons[index]
-            let cardTitle = game.cards[index].shapeText
-            button.setTitle(cardTitle, for: UIControl.State.normal)
+            let card = game.cards[index]
+            button.setTitleForCard(chosenColor: card.color, shading: card.shade, text: card.shapeText)
             if(toBeDealtCards.contains(button)){
                 button.isEnabled = false
                 button.isHidden = true

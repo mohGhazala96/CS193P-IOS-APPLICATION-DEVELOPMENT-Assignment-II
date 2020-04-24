@@ -10,12 +10,15 @@ import Foundation
 struct  Card {
     private(set) var shapeText:String
     private(set) var color:colors
+    private(set) var shade:shading
     private(set) var numberOfSymbols: Int
     
     init() {
-        let shape = shapes.allCases.randomElement()!
         color = colors.allCases.randomElement()!
+        shade = shading.allCases.randomElement()!
         numberOfSymbols = Int.random(in: 1 ... 3)
+        
+        let shape = shapes.allCases.randomElement()!
         switch shape {
         case .circle:
             shapeText = String(repeating: "●", count:numberOfSymbols )
@@ -23,18 +26,16 @@ struct  Card {
             shapeText = String(repeating: "▲", count:numberOfSymbols )
         case .square:
             shapeText = String(repeating: "■", count:numberOfSymbols)
-
         }
         
     }
-
+    
 }
 
 enum shapes: CaseIterable{
     case traingle
     case square
     case circle
-    
 }
 
 enum colors: CaseIterable{
@@ -43,3 +44,8 @@ enum colors: CaseIterable{
     case green
 }
 
+enum shading: CaseIterable{
+    case outlined
+    case filled
+    case faded
+}
