@@ -21,12 +21,18 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="New Game"/>
+                                <connections>
+                                    <action selector="newGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bIT-mM-Z77"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="89E-Kl-Pfj">
                                 <rect key="frame" x="20" y="811" width="114" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Deal"/>
+                                <connections>
+                                    <action selector="dealCards:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f48-2M-So4"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C3b-Ur-bDv">
                                 <rect key="frame" x="142" y="814" width="104" height="51"/>
@@ -243,6 +249,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="scoreLabel" destination="C3b-Ur-bDv" id="bdA-ou-Rlg"/>
                         <outletCollection property="onScreenCards" destination="i5J-ME-Dae" collectionClass="NSMutableArray" id="0nR-p9-MpY"/>
                         <outletCollection property="onScreenCards" destination="63Z-do-cEn" collectionClass="NSMutableArray" id="Hnc-JI-bM5"/>
                         <outletCollection property="onScreenCards" destination="WCj-LO-Zmi" collectionClass="NSMutableArray" id="gI9-cY-UCe"/>

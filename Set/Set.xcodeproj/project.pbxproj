@@ -13,6 +13,8 @@
 		777DFB812452FF6100F8BDE4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 777DFB7F2452FF6100F8BDE4 /* Main.storyboard */; };
 		777DFB832452FF6300F8BDE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 777DFB822452FF6300F8BDE4 /* Assets.xcassets */; };
 		777DFB862452FF6300F8BDE4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 777DFB842452FF6300F8BDE4 /* LaunchScreen.storyboard */; };
+		77B2B8FA24531EBC00B3ED62 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B2B8F924531EBC00B3ED62 /* Card.swift */; };
+		77B2B8FC24532D5E00B3ED62 /* SetGamePlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B2B8FB24532D5E00B3ED62 /* SetGamePlay.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		777DFB822452FF6300F8BDE4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		777DFB852452FF6300F8BDE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		777DFB872452FF6300F8BDE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		77B2B8F924531EBC00B3ED62 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		77B2B8FB24532D5E00B3ED62 /* SetGamePlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetGamePlay.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,8 @@
 				777DFB7F2452FF6100F8BDE4 /* Main.storyboard */,
 				777DFB842452FF6300F8BDE4 /* LaunchScreen.storyboard */,
 				777DFB872452FF6300F8BDE4 /* Info.plist */,
+				77B2B8F924531EBC00B3ED62 /* Card.swift */,
+				77B2B8FB24532D5E00B3ED62 /* SetGamePlay.swift */,
 			);
 			path = Set;
 			sourceTree = "<group>";
@@ -146,9 +152,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77B2B8FC24532D5E00B3ED62 /* SetGamePlay.swift in Sources */,
 				777DFB7E2452FF6100F8BDE4 /* ViewController.swift in Sources */,
 				777DFB7A2452FF6100F8BDE4 /* AppDelegate.swift in Sources */,
 				777DFB7C2452FF6100F8BDE4 /* SceneDelegate.swift in Sources */,
+				77B2B8FA24531EBC00B3ED62 /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
