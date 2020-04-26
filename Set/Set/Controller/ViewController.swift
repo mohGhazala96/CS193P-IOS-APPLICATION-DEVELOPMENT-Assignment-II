@@ -27,9 +27,8 @@ class ViewController: UIViewController {
         }
         if toBeDealtCards.allSatisfy({ $0.isEnabled }){
             modifyButton(Button: dealButton, Hide: true, Enable :false)
-
         }
-    
+        
     }
     
     @IBAction func newGame(_ sender: UIButton) {
@@ -40,9 +39,14 @@ class ViewController: UIViewController {
     }
     
     @IBAction func touchCard(_ sender: CardButton) {
-        sender.toggleButtonSelection()
-        // sleep(1)
         
+        sender.toggleButtonSelection()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            self.chooseCard(sender)
+        }
+    }
+    
+    private func chooseCard(_ sender: CardButton){
         let index = allButtons.firstIndex(of: sender)!
         if sender.buttonIsSelected{
             game.addSelectedCard(game.generatedCards[index])
@@ -71,7 +75,7 @@ class ViewController: UIViewController {
         allButtons = onScreenCards+toBeDealtCards
         addCards()
         selectedButtons = [CardButton]()
-
+        
     }
     
     private func resetSelectedCards(){
@@ -99,14 +103,14 @@ class ViewController: UIViewController {
             button.setTitleForCard(chosenColor: card.color, shading: card.shade, text: card.shapeText)
             if(toBeDealtCards.contains(button)){
                 modifyButton(Button: button, Hide: true, Enable :false)
-            
+                
             }
             
         }
     }
     private func modifyButton(Button button:UIButton,Hide isHidden:Bool, Enable isEnabled:Bool){
         button.isEnabled = isEnabled
-         button.isHidden = isHidden
+        button.isHidden = isHidden
     }
 }
 

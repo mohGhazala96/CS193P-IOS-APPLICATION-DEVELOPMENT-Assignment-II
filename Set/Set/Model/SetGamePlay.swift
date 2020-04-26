@@ -71,6 +71,7 @@ class SetGamePlay {
         selectedCards = []
     }
     func resetAllCards(){
+        score = 0
         generatedCards = []
     }
     

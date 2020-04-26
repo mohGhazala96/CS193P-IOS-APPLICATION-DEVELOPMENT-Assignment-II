@@ -8,22 +8,16 @@
 import UIKit
 
 
-class CardButton: UIButton {
+class CardButton: RoundedButton {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        initialSetup()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        initialSetup()
     }
     
-    private func initialSetup() {
-        layer.cornerRadius = frame.width * 0.25
-        layer.backgroundColor = #colorLiteral(red: 0.9607381225, green: 0.9607381225, blue: 0.9607381225, alpha: 1)
-    }
     func toggleButtonSelection() {
         buttonIsSelected = !buttonIsSelected
     }
