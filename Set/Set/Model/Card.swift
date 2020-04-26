@@ -17,14 +17,15 @@ struct  Card :Hashable  {
         return lhs.identifier == rhs.identifier
     }
     
-    private var identifier:Int
-    static var idenitifierFactory = 0
+    private(set) var identifier:Int
+    private(set) static var idenitifierFactory = -1
     private(set) var shapeText:String
+    private(set) var shape:shapes
     private(set) var color:colors
     private(set) var shade:shading
     private(set) var numberOfSymbols: Int
     
-    static func getUniqueIdentifier() ->Int{
+    private static func getUniqueIdentifier() ->Int{
         idenitifierFactory+=1
         return idenitifierFactory
     }
@@ -33,7 +34,7 @@ struct  Card :Hashable  {
         self.identifier = Card.getUniqueIdentifier()
         color = colors.allCases.randomElement()!
         shade = shading.allCases.randomElement()!
-        let shape = shapes.allCases.randomElement()!
+        shape = shapes.allCases.randomElement()!
         numberOfSymbols = Int.random(in: 1 ... 3)
         
         switch shape {
@@ -46,23 +47,24 @@ struct  Card :Hashable  {
         }
         
     }
-    
+
+    enum shapes: CaseIterable{
+        case traingle
+        case square
+        case circle
+    }
+
+    enum colors: CaseIterable{
+        case red
+        case purple
+        case green
+    }
+
+    enum shading: CaseIterable{
+        case outlined
+        case filled
+        case faded
+    }
 }
 
-enum shapes: CaseIterable{
-    case traingle
-    case square
-    case circle
-}
 
-enum colors: CaseIterable{
-    case red
-    case purple
-    case green
-}
-
-enum shading: CaseIterable{
-    case outlined
-    case filled
-    case faded
-}

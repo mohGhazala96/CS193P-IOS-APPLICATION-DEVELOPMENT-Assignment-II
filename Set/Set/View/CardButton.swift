@@ -44,7 +44,7 @@ class CardButton: UIButton {
         }
     }
     
-    func setTitleForCard(chosenColor: colors ,shading: shading,text: String)  {
+    func setTitleForCard(chosenColor: Card.colors ,shading: Card.shading,text: String)  {
         var color: UIColor
         switch chosenColor {
         case .purple: color = #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1)

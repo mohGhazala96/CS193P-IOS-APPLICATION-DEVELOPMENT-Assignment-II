@@ -62,14 +62,11 @@
 		777DFB782452FF6100F8BDE4 /* Set */ = {
 			isa = PBXGroup;
 			children = (
+				77CD39512455B4FA00D28637 /* Controller */,
+				77CD39502455B4DF00D28637 /* View */,
+				77CD394F2455B4C600D28637 /* Model */,
 				777DFB8D2453119800F8BDE4 /* Supporting Files */,
-				777DFB7D2452FF6100F8BDE4 /* ViewController.swift */,
-				777DFB7F2452FF6100F8BDE4 /* Main.storyboard */,
-				777DFB842452FF6300F8BDE4 /* LaunchScreen.storyboard */,
 				777DFB872452FF6300F8BDE4 /* Info.plist */,
-				77B2B8F924531EBC00B3ED62 /* Card.swift */,
-				77B2B8FB24532D5E00B3ED62 /* SetGamePlay.swift */,
-				77B2B8FD2453365800B3ED62 /* CardButton.swift */,
 			);
 			path = Set;
 			sourceTree = "<group>";
@@ -82,6 +79,33 @@
 				777DFB822452FF6300F8BDE4 /* Assets.xcassets */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		77CD394F2455B4C600D28637 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				77B2B8F924531EBC00B3ED62 /* Card.swift */,
+				77B2B8FB24532D5E00B3ED62 /* SetGamePlay.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		77CD39502455B4DF00D28637 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				77B2B8FD2453365800B3ED62 /* CardButton.swift */,
+				777DFB842452FF6300F8BDE4 /* LaunchScreen.storyboard */,
+				777DFB7F2452FF6100F8BDE4 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		77CD39512455B4FA00D28637 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				777DFB7D2452FF6100F8BDE4 /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
