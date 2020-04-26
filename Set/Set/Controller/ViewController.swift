@@ -41,9 +41,7 @@ class ViewController: UIViewController {
     @IBAction func touchCard(_ sender: CardButton) {
         
         sender.toggleButtonSelection()
-        scoreLabel.text = "Score: 3"
-
-        DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.chooseCard(sender)
         }
     }
@@ -52,9 +50,9 @@ class ViewController: UIViewController {
         let index = allButtons.firstIndex(of: sender)!
         if sender.buttonIsSelected{
             game.addSelectedCard(game.generatedCards[index])
-            
             // checks if the numbers of selected cards are three
             if game.areSelectedCardsFull() {
+                scoreLabel.text = "Score: \(game.updateScore())"
                 selectedButtons.append(sender)
                 // updates the 3 selected cards with new cards if they match
                 if game.doSelectedCardsMatch() {
