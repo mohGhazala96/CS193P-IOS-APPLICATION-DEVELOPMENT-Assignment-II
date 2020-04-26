@@ -36,7 +36,6 @@ struct  Card :Hashable  {
         shade = shading.allCases.randomElement()!
         shape = shapes.allCases.randomElement()!
         numberOfSymbols = Int.random(in: 1 ... 3)
-        
         switch shape {
         case .circle:
             shapeText = String(repeating: "●", count:numberOfSymbols )
