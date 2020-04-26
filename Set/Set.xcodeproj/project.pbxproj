@@ -64,6 +64,8 @@
 		777DFB782452FF6100F8BDE4 /* Set */ = {
 			isa = PBXGroup;
 			children = (
+				777DFB842452FF6300F8BDE4 /* LaunchScreen.storyboard */,
+				777DFB7F2452FF6100F8BDE4 /* Main.storyboard */,
 				77CD39512455B4FA00D28637 /* Controller */,
 				77CD39502455B4DF00D28637 /* View */,
 				77CD394F2455B4C600D28637 /* Model */,
@@ -96,8 +98,6 @@
 			isa = PBXGroup;
 			children = (
 				77B2B8FD2453365800B3ED62 /* CardButton.swift */,
-				777DFB842452FF6300F8BDE4 /* LaunchScreen.storyboard */,
-				777DFB7F2452FF6100F8BDE4 /* Main.storyboard */,
 				77CD39522455C93D00D28637 /* RoundedButton.swift */,
 			);
 			path = View;
